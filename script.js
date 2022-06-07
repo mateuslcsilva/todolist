@@ -9,7 +9,7 @@ function adcionar() {
             let semTarefa = document.querySelector('.semTarefa')
             container.removeChild(semTarefa)
         }
-        if (contagem < 13) {
+        if (contagem < 130) {
             let container = document.querySelector('.container')
             let div = document.createElement('div')
             let li = document.createElement('li')
@@ -100,11 +100,13 @@ function apagar(element) {
 function concluidas() {
     document.querySelector('.concluidas').style.display = 'block'
     document.querySelector('.container').style.display = 'none'
+    document.querySelector('.btns').style.display = 'none'
 }
 
 function voltar() {
     document.querySelector('.concluidas').style.display = 'none'
     document.querySelector('.container').style.display = 'block'
+    document.querySelector('.btns').style.display = 'block'
 }
 
 function limpar() {
@@ -118,4 +120,3 @@ document.addEventListener('keydown', function (e) {
     e.key === 'Enter' ? adcionar() : {}
 }
 )
-
